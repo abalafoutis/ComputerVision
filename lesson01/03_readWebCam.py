@@ -8,4 +8,5 @@ video.set(10, 100) # το id=10 αλλάζει τη φωτεινότητα
 while True:
    success, img = video.read()
    cv2.imshow("Video", img)
-   cv2.waitKey(1)
+   if cv2.waitKey(1) & 0xFF ==  ord('q'):
+       break
